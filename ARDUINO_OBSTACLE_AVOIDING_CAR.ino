@@ -119,7 +119,7 @@ void moveForward() {
     goesForward=true;
     motor1.run(FORWARD);       
     motor3.run(FORWARD);     
-   for (speedSet = 0; speedSet < MAX_SPEED; speedSet +=2) // slowly bring the speed up to avoid loading down the batteries too quickly
+   for (speedSet = 0; speedSet < MAX_SPEED; speedSet +=2) // we iteratively increase the speed so as to avoid battery discharge
    {
     motor1.setSpeed(speedSet);
     motor3.setSpeed(speedSet);
@@ -132,7 +132,7 @@ void moveBackward() {
     goesForward=false;  
     motor1.run(BACKWARD);      
     motor3.run(BACKWARD);  
-  for (speedSet = 0; speedSet < MAX_SPEED; speedSet +=2) // slowly bring the speed up to avoid loading down the batteries too quickly
+  for (speedSet = 0; speedSet < MAX_SPEED; speedSet +=2) // we iteratively increase the speed so as to avoid battery discharge
   {
     motor1.setSpeed(speedSet);
     motor3.setSpeed(speedSet);
